@@ -44,7 +44,8 @@
     ("flatland-green+3"   . "#b8d977")
     ("flatland-green+2"   . "#b7d877")
     ("flatland-green+1"   . "#b6d877")
-    ("flatland-green"     . "#40b83e")
+    ;; ("flatland-green"     . "#40b83e")
+    ("flatland-green"     . "#b9d977")
     ("flatland-green-1"   . "#41a83e")
     ("flatland-blue+1"    . "#cfe2f2")
     ("flatland-blue"      . "#afc4db")
@@ -142,16 +143,20 @@ Also bind `class' to ((class color) (min-colors 89))."
 
    `(menu ((t (:foreground ,flatland-fg :background ,flatland-bg))))
    `(minibuffer-prompt ((t (:foreground ,flatland-yellow))))
-   `(mode-line
-     ((,class (:foreground ,flatland-green+1
-                           :background ,flatland-bg-1
-                           :box (:line-width -1 :style released-button)))
-      (t :inverse-video t)))
-   `(mode-line-buffer-id ((t (:foreground ,flatland-yellow :weight bold))))
-   `(mode-line-inactive
-     ((t (:foreground ,flatland-green-1
-                      :background ,flatland-bg-05
-                      :box (:line-width -1 :style released-button)))))
+   ;; mode-line
+   ;; `(mode-line
+   ;;   ((,class (:foreground ,flatland-green+1
+   ;;                         :background ,flatland-bg-1
+   ;;                         :box (:line-width -1 :style released-button)))
+   ;;    (t :inverse-video t)))
+   '(mode-line ((t (:foreground "#e0e0e0" :background "#26292c"))))
+   ;; `(mode-line-buffer-id ((t (:foreground ,flatland-yellow :weight bold))))
+   `(mode-line-buffer-id ((t (:foreground "#e0e0e0" :weight semi-bold))))
+   ;; `(mode-line-inactive
+   ;;   ((t (:foreground ,flatland-green-1
+   ;;                    :background ,flatland-bg-05
+   ;;                    :box (:line-width -1 :style released-button)))))
+   '(mode-line-inactive ((t (:foreground "#e0e0e0" :background "#1f2124"))))
    `(region ((,class (:background ,flatland-selection))
              (t :inverse-video t)))
    `(secondary-selection ((t (:background ,flatland-bg+2))))
